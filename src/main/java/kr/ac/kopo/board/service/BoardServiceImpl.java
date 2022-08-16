@@ -19,4 +19,15 @@ public class BoardServiceImpl implements BoardService{
 		return boardDAO.selectAll();
 	}
 
+	@Override
+	public BoardVO getOneBoard(int boardNo) {
+		// TODO Auto-generated method stub
+		return boardDAO.selectOne(boardNo);
+	}
+
+	@Override
+	public void addBoard(BoardVO board) {
+		boardDAO.insert(board);
+	}
+
 }
